@@ -1,0 +1,80 @@
+@import '../../scss/index.scss';
+
+.footer {
+  margin-top: 10px;
+  box-shadow: 0px 0px 5px #444;
+  position: absolute;
+
+  .instagram {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+
+    i {
+      color: $color-font-secundary ;
+    }
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      span {
+        color: $color-font-secundary;
+        text-transform: uppercase;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+  
+  .phone {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+
+    i {
+      font-size: 28px;
+      margin-right: 10px;
+      color: $color-primary;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .footer {
+    .instagram {
+      font-size: 15px;
+    }
+
+    .phone {
+      font-size: 15px;
+
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .phone {
+    display: none !important;
+  }
+}

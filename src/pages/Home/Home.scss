@@ -1,0 +1,366 @@
+@import '../../scss/index.scss';
+
+.home {
+  
+  .firt-poster {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/img/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 40%;
+    z-index: -1;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    &__title {
+      font-size: 50px;
+      margin: 0;
+    }
+    &__subtitle {
+      font-size: 25px;
+    }
+  }
+
+  .info {
+    margin-top: 30px;
+
+    .info__title {
+      text-transform: uppercase;
+      text-align: center;
+
+      > h2 {
+        font-size: 32px;
+        color: $color-font-secundary;
+        font-weight: bold;
+      }
+      > h3 {
+        font-size: 20px;
+        color: $color-font-secundary-light;
+        margin-top: -15px;
+      }
+    }
+
+    .info__description {
+      color: $color-font-secundary-light;
+      margin-top: 15px;
+      p {
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+
+    .info_benefits {
+      margin-top: 30px;
+
+      .benefit {
+        i {
+          width: 100%;
+          text-align: center;
+          font-size: 54px;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-size: 16px;
+          text-align: center;
+          text-transform: capitalize;
+          color: $color-font-secundary-light;
+        }
+      }
+
+      .ubications {
+        i {color: $color-icon-ubication;}
+      }
+      .pool {
+        i {color: $color-icon-pool;}
+      }
+      .speaker {
+        i {color: $color-icon-speaker;}
+      }
+      .security {
+        i {color: $color-icon-security;}
+      }
+
+    }
+  }
+  
+  .galeria {
+    margin-top: 30px;
+    > h2 {
+      text-transform: uppercase;
+      font-size: 32px;
+      color: $color-font-secundary;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .map {
+    &__title {
+      font-size: 32px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-font-secundary;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+  .paquets {
+    margin-top: 20px;
+    > h2 {
+      text-align: center;
+      color: $color-font-secundary;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .paquet {
+      display: row;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid #ccc;
+      box-shadow: 0px 0px 5px $color-font-secundary-light;
+      
+      &-icon {
+        font-size: 52px;
+        text-align: center;
+        color: $color-primary;
+        margin-top: 25px;
+      }
+
+      > h3 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      > h4 {
+        font-size: 19px;
+        color: $color-font-secundary-light;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      > p {
+        color: $color-font-secundary;
+        margin: 0; 
+      }
+
+      .time {
+        margin-bottom: 20px;
+        > h4 {
+          color: $color-font-secundary-light;
+          font-size: 18px;
+          text-align: center;
+          margin: 2px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+
+        span {
+          color: $color-font-secundary;
+        }
+      }
+
+      .more-info {
+        width: 100%;
+        margin: 0px;
+        border: 0;
+        border-radius: 0;
+      }
+
+      .price {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        border: 1px solid transparent;
+        background-color: $color-primary;
+        padding: 2px 10px;
+        border-radius: 0px 0px 0px 20px;
+        color: $color-font-primary;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .postal {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    margin-top: 2vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/img/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 75%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 4px #444;
+
+    > h2 {
+      font-size: 38px;
+    }
+
+    > h3 {
+      margin-top: -15px;
+      font-size: 28px;
+    }
+  }
+}
+
+/* MEDIA QUERY */
+@media (max-width: 850px) {
+  .home {
+    .postal {
+      > h2 {
+        font-size: 30px;
+      }
+  
+      > h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .home {
+    .firt-poster {
+      background-position-y: 10%;
+      &__title {
+        font-size: 45px;
+      }
+      &__subtitle {
+        font-size: 25px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 660px) {
+  .home {
+    .postal {
+      > h2 {
+        font-size: 25px;
+      }
+  
+      > h3 {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .home {
+    .postal {
+      > h2 {
+        font-size: 20px;
+      }
+  
+      > h3 {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    .firt-poster {
+      height: 90vh;
+      background-position-x: 70%;
+      &__title {
+        font-size: 35px;
+        text-shadow: 1px 1px 2px #444;
+      }
+      &__subtitle {
+        font-size: 20px;
+        text-shadow: 1px 1px 2px #444;
+      }
+    }
+
+    .info {
+      .info__title {
+        > h3 {
+          margin-top: -5px;
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 450px) {
+  .home {
+    .postal {
+      > h2 {
+        font-size: 18px;
+      }
+  
+      > h3 {
+        margin: -10px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .home {
+    .postal {
+      > h2 {
+        font-size: 15px;
+      }
+  
+      > h3 {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .home {
+    .firt-poster {
+      &__title {
+        font-size: 25px;
+      }
+      &__subtitle {
+        font-size: 18px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 330px) {
+  .home {
+    .postal {
+      > h2 {
+        font-size: 12px;
+      }
+  
+      > h3 {
+        font-size: 8px;
+      }
+    }
+  }
+}
